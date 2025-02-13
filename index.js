@@ -8,6 +8,12 @@ const port = 3010;
 app.use(express.static('static'));
 app.use(cors());
 
+// Import the routes from arrays.js
+const arraysRoutes = require('./arrays');
+
+// Use the routes
+app.use(arraysRoutes);
+
 /**
  * Sending a JSON in the response
  */
